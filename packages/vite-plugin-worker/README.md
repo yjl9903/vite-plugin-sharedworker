@@ -1,4 +1,4 @@
-# vite-plugin-worker/core
+# vite-plugin-sharedworker
 
 ## License
 
