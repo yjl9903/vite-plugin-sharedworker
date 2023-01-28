@@ -1,15 +1,15 @@
 {
-  "name": "vite-plugin-worker",
-  "version": "0.0.1",
+  "name": "vite-plugin-sharedworker",
+  "version": "0.0.0",
   "description": "",
   "keywords": [],
-  "homepage": "https://github.com/yjl9903/vite-plugin-worker#readme",
+  "homepage": "https://github.com/yjl9903/vite-plugin-sharedworker#readme",
   "bugs": {
-    "url": "https://github.com/yjl9903/vite-plugin-worker/issues"
+    "url": "https://github.com/yjl9903/vite-plugin-sharedworker/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yjl9903/vite-plugin-worker.git"
+    "url": "git+https://github.com/yjl9903/vite-plugin-sharedworker.git"
   },
   "license": "MIT",
   "author": "XLor",
