@@ -22,7 +22,7 @@ importers:
       vite: 4.0.4_@types+node@18.0.0
       vitest: 0.28.3
 
-  packages/core:
+  packages/vite-plugin-worker:
     specifiers:
       '@types/node': ^18.0.0
       unbuild: ^1.1.1
