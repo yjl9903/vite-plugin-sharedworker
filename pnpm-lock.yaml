@@ -4,7 +4,8 @@ importers:
 
   .:
     specifiers:
-      '@types/node': ^18.0.0
+      '@types/node': ^18.11.18
+      '@types/sharedworker': ^0.0.91
       bumpp: latest
       prettier: latest
       turbo: latest
@@ -13,13 +14,14 @@ importers:
       vite: ^4.0.4
       vitest: ^0.28.3
     devDependencies:
-      '@types/node': 18.0.0
+      '@types/node': 18.11.18
+      '@types/sharedworker': 0.0.91
       bumpp: 8.2.1
       prettier: 2.8.3
       turbo: 1.7.0
       typescript: 4.9.4
       unbuild: 1.1.1
-      vite: 4.0.4_@types+node@18.0.0
+      vite: 4.0.4_@types+node@18.11.18
       vitest: 0.28.3
 
   packages/vite-plugin-worker:
@@ -818,8 +820,16 @@ packages:
     resolution: {integrity: sha512-cHlGmko4gWLVI27cGJntjs/Sj8th9aYwplmZFwmmgYQQvL5NUsgVJG7OddLvNfLqYS31KFN0s3qlaD9qCaxACA==}
     dev: true
 
+  /@types/node/18.11.18:
+    resolution: {integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==}
+    dev: true
+
   /@types/resolve/1.20.2:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
+    dev: true
+
+  /@types/sharedworker/0.0.91:
+    resolution: {integrity: sha512-dgah1rutdK+TnzecsnfHn+zpisC2ILn9sBeXRGGEvBrrZJL4722UdYT56yjcDxvGiT2rMHGKXg/NygyEree5ZQ==}
     dev: true
 
   /@vitest/expect/0.28.3:
@@ -2051,6 +2061,40 @@ packages:
         optional: true
     dependencies:
       '@types/node': 18.0.0
+      esbuild: 0.16.3
+      postcss: 8.4.20
+      resolve: 1.22.1
+      rollup: 3.7.0
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
+
+  /vite/4.0.4_@types+node@18.11.18:
+    resolution: {integrity: sha512-xevPU7M8FU0i/80DMR+YhgrzR5KS2ORy1B4xcX/cXLsvnUWvfHuqMmVU6N0YiJ4JWGRJJsLCgjEzKjG9/GKoSw==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': '>= 14'
+      less: '*'
+      sass: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      less:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+    dependencies:
+      '@types/node': 18.11.18
       esbuild: 0.16.3
       postcss: 8.4.20
       resolve: 1.22.1

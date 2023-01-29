@@ -12,7 +12,8 @@
     "preversion": "pnpm build && pnpm test"
   },
   "devDependencies": {
-    "@types/node": "^18.0.0",
+    "@types/node": "^18.11.18",
+    "@types/sharedworker": "^0.0.91",
     "bumpp": "latest",
     "prettier": "latest",
     "turbo": "latest",
