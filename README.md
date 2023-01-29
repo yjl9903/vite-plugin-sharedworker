@@ -24,7 +24,9 @@ export default defineConfig({
 
 ## Usage
 
-You just need to write functions and export them just like what you usually do.
+Create a directory used for shared workers (default is `./worker/`). All the scripts in this directory will be transformed as RPC shared worker.
+
+You can just write functions and export them like what you usually do.
 
 ```ts
 // worker/index.ts
@@ -42,7 +44,9 @@ export async function sub(a: number, b: number) {
 >
 > To make TypeScript return type work fine, you must export **async** functions, even if they are sync.
 
-Then you can just import your shared worker script just like what you usually do.
+Then you can just import your shared worker script like what you usually do.
+
+This plugin will transform your method call to send message to the shared worker, and receive return value from the shared worker. Note that all the messages are serialized as JSON.
 
 ```ts
 // src/main.ts
