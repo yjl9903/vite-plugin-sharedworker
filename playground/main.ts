@@ -1,6 +1,11 @@
-import { add } from './worker';
+import { add, sub } from './worker';
 
-console.log(await add(1, 2));
+async function bootstrap() {
+  console.log(await add(1, 2));
+  console.log(await sub(2, 1));
+}
+
+bootstrap();
 
 // const worker = new SharedWorker(new URL('./worker/index.ts', import.meta.url), {
 //   type: 'module',
