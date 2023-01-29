@@ -19,10 +19,10 @@
     ],
     "useDefineForClassFields": true
   },
+  "include": [
+    "src/**/*.ts"
+  ],
   "exclude": [
     "**/dist/**"
-  ],
-  "include": [
-    "./main.ts"
   ]
 }

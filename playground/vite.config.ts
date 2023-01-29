@@ -12,12 +12,12 @@ import {
 import Uno from 'unocss/vite';
 
 import BuildInfo from 'vite-plugin-info';
-import SharedWorkerClient from 'vite-plugin-sharedworker';
+import SharedWorker from 'vite-plugin-sharedworker';
 
 export default defineConfig({
   plugins: [
     BuildInfo(),
-    SharedWorkerClient(),
+    SharedWorker(),
     Uno({
       presets: [
         presetUno(),

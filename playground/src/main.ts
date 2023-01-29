@@ -1,7 +1,7 @@
 import 'uno.css';
 import '@onekuma/reset/tailwind.css';
 
-import { add, sub } from './worker';
+import { add, sub } from '../worker';
 
 async function bootstrap() {
   console.log(await add(1, 2));
