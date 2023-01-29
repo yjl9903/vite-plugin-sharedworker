@@ -2,13 +2,8 @@
 
 declare const self: SharedWorkerGlobalScope;
 
-self.addEventListener('connect', (event) => {
-  console.log('connect', event);
-  const port = event.ports[0];
-  port.addEventListener('message', (event) => {
-    console.log('message', event);
-  });
-  port.start();
-});
+import { defineSharedWorker } from 'vite-plugin-sharedworker/runtime';
+
+defineSharedWorker(self);
 
 export type {};
