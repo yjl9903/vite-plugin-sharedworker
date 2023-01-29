@@ -7,7 +7,22 @@
   <title>Vite Plugin Sharedworker</title>
 </head>
 <body>
-  <div id="build-time"></div>
+  <div p4 space-y-4>
+    <div>
+      <input id="ia" type="number" value="1" class="border-1 border-base rounded py2 px2 outline-none">
+    </div>
+    <div>
+      <input id="ib" type="number" value="1" class="border-1 border-base rounded py2 px2 outline-none">
+    </div>
+    <div space-x-2>
+      <button id="add" class="button bg-green-200/60 hover:bg-green-200">ADD</button>
+      <button id="sub" class="button bg-red-200/60 hover:bg-red-200">SUB</button>
+    </div>
+    <div>
+      <span class="text-gray-500">Result:</span>
+      <span id="result"></span>
+    </div>
+  </div>
   <script type="module" src="/main.ts"></script>
 </body>
 </html>
