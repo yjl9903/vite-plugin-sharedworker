@@ -1,3 +1,5 @@
+/// <reference lib="WebWorker" />
+
 export function defineSharedWorker(self: SharedWorkerGlobalScope) {
   self.addEventListener('connect', (event) => {
     console.log('connect', event);

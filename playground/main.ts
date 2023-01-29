@@ -1,17 +1,16 @@
-const worker1 = new SharedWorker(new URL('./worker.ts', import.meta.url), {
-  type: 'module'
+import { add } from './worker';
+
+console.log(add(1, 2));
+
+const worker = new SharedWorker(new URL('./worker/index.ts', import.meta.url), {
+  type: 'module',
+  name: 'worker'
 });
 
-worker1.port.start();
+worker.port.start();
 
-worker1.port.postMessage('hello 1');
+worker.port.postMessage('hello 1');
 
-const worker2 = new SharedWorker(new URL('./worker.ts', import.meta.url), {
-  type: 'module'
-});
-
-worker2.port.start();
-
-worker2.port.postMessage('hello 2');
+console.log('OK');
 
 export {};

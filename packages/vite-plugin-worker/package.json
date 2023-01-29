@@ -46,11 +46,18 @@
     "test:ci": "vitest --run",
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "mlly": "^1.1.0"
+  },
   "devDependencies": {
-    "@types/node": "^18.0.0",
+    "@types/node": "^18.11.18",
+    "@types/sharedworker": "^0.0.91",
     "unbuild": "^1.1.1",
     "vite": "^4.0.4",
     "vitest": "^0.28.3"
+  },
+  "peerDependencies": {
+    "vite": "^4.0.4"
   },
   "engines": {
     "node": ">=v16.16.0"
