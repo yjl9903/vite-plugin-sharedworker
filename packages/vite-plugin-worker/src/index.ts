@@ -17,24 +17,26 @@ export default function SharedWorker(options?: { root?: string }): Plugin {
       if (id.startsWith(root)) {
         const isClient = !id.endsWith('worker_file');
 
-        // console.log(id);
-        if (isClient) {
-          const exports = findExports(code);
+        const exports = findExports(code).filter((ex) => !!ex.name);
 
+        if (isClient) {
           return [
+            `// vite-plugin-sharedworker starts`,
+            `import { defineClient } from 'vite-plugin-sharedworker/runtime'`,
             `const worker = new SharedWorker(new URL(${JSON.stringify(
               id
             )}, import.meta.url), { type: 'module', name: 'worker' });`,
-            `worker.port.start()`,
-            ...exports
-              .filter((ex) => ex.name)
-              .map((ex) => `export const ${ex.name} = (...args: any[]) => {}`)
+            `const client = defineClient(worker)`,
+            `// vite-plugin-sharedworker ends`,
+            ...exports.map(
+              (ex) => `export const ${ex.name} = client.defineFunction(${JSON.stringify(ex.name)})`
+            )
           ].join('\n');
         } else {
           const imports = [
             `// vite-plugin-sharedworker starts`,
             `import { defineSharedWorker } from 'vite-plugin-sharedworker/runtime'`,
-            `defineSharedWorker(self)`,
+            `defineSharedWorker(self, [${exports.map((ex) => ex.name!).join(', ')}])`,
             `// vite-plugin-sharedworker ends`,
             ''
           ];

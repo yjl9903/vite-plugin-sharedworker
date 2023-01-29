@@ -4,6 +4,6 @@
 // defineSharedWorker(self);
 // export type {};
 
-export function add(a: number, b: number) {
+export async function add(a: number, b: number) {
   return a + b;
 }
