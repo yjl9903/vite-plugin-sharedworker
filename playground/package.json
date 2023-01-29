@@ -1,0 +1,14 @@
+{
+  "name": "playground",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vite": "^4.0.4",
+    "vite-plugin-info": "^0.4.0",
+    "vite-plugin-sharedworker": "workspace:*"
+  }
+}
