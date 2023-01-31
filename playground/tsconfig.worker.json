@@ -1,8 +1,15 @@
 {
   "compilerOptions": {
-    "lib": ["ESNext", "WebWorker"],
-    "types": ["vite/client"]
+    "lib": [
+      "ESNext",
+      "WebWorker"
+    ],
+    "types": [
+      "vite-plugin-sharedworker/runtime"
+    ]
   },
-  "include": ["./worker/*.ts"],
+  "include": [
+    "./worker/*.ts"
+  ],
   "extends": "./tsconfig.json"
 }

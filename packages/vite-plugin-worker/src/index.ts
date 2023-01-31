@@ -37,7 +37,9 @@ export default function SharedWorker(options?: { root?: string }): Plugin {
           const imports = [
             `// vite-plugin-sharedworker starts`,
             `import { defineSharedWorker } from 'vite-plugin-sharedworker/runtime'`,
-            `defineSharedWorker(self, [${exports.map((ex) => ex.name!).join(', ')}])`,
+            `const worker = defineSharedWorker(self, [${exports
+              .map((ex) => ex.name!)
+              .join(', ')}])`,
             `// vite-plugin-sharedworker ends`,
             ''
           ];
