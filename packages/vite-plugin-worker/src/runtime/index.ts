@@ -26,6 +26,9 @@ declare global {
 type Fn = (...args: any[]) => any;
 
 export function defineSharedWorker(self: SharedWorkerGlobalScope, fns: Fn[]): SharedWorkerServer {
+  // Filter function
+  fns = fns.filter((fn) => typeof fn === 'function');
+
   const map = new Map<string, Fn>();
   for (const fn of fns) {
     map.set(fn.name, fn);
