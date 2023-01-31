@@ -15,6 +15,8 @@ import { randomString } from './utils';
 
 export * from './types';
 
+export * from './payload';
+
 type _SharedWorkerServer = SharedWorkerServer;
 
 declare global {
@@ -67,6 +69,9 @@ export function defineSharedWorker(self: SharedWorkerGlobalScope, fns: Fn[]): Sh
   return {
     ports() {
       return [...ports.keys()];
+    },
+    dispatch(port, data: any) {
+      port.postMessage(makeBroadcastPayload(data));
     },
     broadcast(data: any) {
       for (const port of ports.keys()) {
