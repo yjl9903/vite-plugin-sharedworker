@@ -1,11 +1,15 @@
 import 'uno.css';
 import '@onekuma/reset/tailwind.css';
 
-import { add, sub, addMessageListener } from '../worker';
+import { add, sub, dispatch, addMessageListener } from '../worker';
 
-addMessageListener((data) => {
-  console.log(data);
+addMessageListener((payload) => {
+  console.log('Receive:', payload);
 });
+
+setInterval(() => {
+  dispatch('Hello, this is client');
+}, 5000);
 
 async function bootstrap() {
   console.log(await add(1, 2));
