@@ -88,9 +88,11 @@ export function defineClient(worker: SharedWorker) {
         const callback = callbacks.get(payload.data.id);
         if (callback) {
           callback(payload.data);
+          callbacks.delete(payload.data.id);
         } else {
           console.error(`Unknown message: ${JSON.stringify(payload, null, 2)}`);
         }
+      } else if (payload.command === 'broadcast') {
       }
     }
   });
