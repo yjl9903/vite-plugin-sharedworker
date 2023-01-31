@@ -17,20 +17,26 @@ export default function SharedWorker(options?: { root?: string }): Plugin {
       if (id.startsWith(root)) {
         const isClient = !id.endsWith('worker_file');
 
-        const exports = findExports(code).filter((ex) => !!ex.name);
+        const exports = findExports(code)
+          .filter((ex) => !!ex.name)
+          .filter((ex) => ex.name !== 'dispatch' && ex.name !== 'addMessageListener');
 
         if (isClient) {
           const workerName = path.basename(id.split('?')[0]);
           return [
             `// vite-plugin-sharedworker starts`,
-            `import { defineClient } from 'vite-plugin-sharedworker/runtime'`,
-            `const worker = new SharedWorker(new URL(${JSON.stringify(
+            `import { defineClientFactory } from 'vite-plugin-sharedworker/runtime'`,
+            `const __worker__ = new SharedWorker(new URL(${JSON.stringify(
               id
             )}, import.meta.url), { type: 'module', name: ${JSON.stringify(workerName)} });`,
-            `const client = defineClient(worker)`,
+            `const __factory__ = defineClientFactory(__worker__)`,
+            `const client = __factory__.defineClient()`,
+            `export const dispatch = client.dispatch`,
+            `export const addMessageListener = client.addMessageListener`,
             `// vite-plugin-sharedworker ends`,
             ...exports.map(
-              (ex) => `export const ${ex.name} = client.defineFunction(${JSON.stringify(ex.name)})`
+              (ex) =>
+                `export const ${ex.name} = __factory__.defineFunction(${JSON.stringify(ex.name)})`
             )
           ].join('\n');
         } else {
@@ -40,6 +46,7 @@ export default function SharedWorker(options?: { root?: string }): Plugin {
             `const worker = defineSharedWorker(self, [${exports
               .map((ex) => ex.name!)
               .join(', ')}])`,
+            `const client = { dispatch: undefined, addMessageListener: undefined }`,
             `// vite-plugin-sharedworker ends`,
             ''
           ];

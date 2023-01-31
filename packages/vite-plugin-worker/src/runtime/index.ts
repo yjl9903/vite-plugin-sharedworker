@@ -1,7 +1,7 @@
 /// <reference lib="DOM" />
 /// <reference lib="WebWorker" />
 
-import type { SharedWorkerServer } from './types';
+import type { SharedWorkerServer, SharedWorkerClient, MessageCallback } from './types';
 
 import {
   makeRpcPayload,
@@ -18,9 +18,11 @@ export * from './types';
 export * from './payload';
 
 type _SharedWorkerServer = SharedWorkerServer;
+type _SharedWorkerClient = SharedWorkerClient;
 
 declare global {
   export type SharedWorkerServer = _SharedWorkerServer;
+  export type SharedWorkerClient = _SharedWorkerClient;
 }
 
 type Fn = (...args: any[]) => any;
@@ -45,6 +47,8 @@ export function defineSharedWorker(self: SharedWorkerGlobalScope, fns: Fn[]): Sh
     }
   }, 1000);
 
+  const messageCallbacks: MessageCallback<any>[] = [];
+
   self.addEventListener('connect', (event) => {
     const port = event.ports[0];
     ports.set(port, new Date());
@@ -60,6 +64,8 @@ export function defineSharedWorker(self: SharedWorkerGlobalScope, fns: Fn[]): Sh
           } else {
             console.error(`Unknown message: ${JSON.stringify(payload, null, 2)}`);
           }
+        } else if (payload.command === 'broadcast') {
+          await Promise.all(messageCallbacks.map((fn) => fn.apply(event, [payload.data])));
         } else if (payload.command === 'ping') {
           ports.set(port, new Date());
         }
@@ -76,6 +82,9 @@ export function defineSharedWorker(self: SharedWorkerGlobalScope, fns: Fn[]): Sh
     dispatch(port, data: any) {
       port.postMessage(makeBroadcastPayload(data));
     },
+    addMessageListener(fn) {
+      messageCallbacks.push(fn);
+    },
     broadcast(data: any) {
       for (const port of ports.keys()) {
         port.postMessage(makeBroadcastPayload(data));
@@ -84,12 +93,13 @@ export function defineSharedWorker(self: SharedWorkerGlobalScope, fns: Fn[]): Sh
   };
 }
 
-export function defineClient(worker: SharedWorker) {
+export function defineClientFactory(worker: SharedWorker) {
   worker.port.start();
 
   const callbacks = new Map<string, (payload: RpcPayload) => void>();
+  const messageCallbacks: MessageCallback<any>[] = [];
 
-  worker.port.addEventListener('message', (event) => {
+  worker.port.addEventListener('message', async (event) => {
     const payload = parsePayload(event.data);
     if (payload) {
       if (payload.command === 'rpc') {
@@ -101,6 +111,7 @@ export function defineClient(worker: SharedWorker) {
           console.error(`Unknown message: ${JSON.stringify(payload, null, 2)}`);
         }
       } else if (payload.command === 'broadcast') {
+        await Promise.all(messageCallbacks.map((fn) => fn.apply(event, [payload.data])));
       }
     }
   });
@@ -121,6 +132,16 @@ export function defineClient(worker: SharedWorker) {
           });
           worker.port.postMessage(payload);
         });
+      };
+    },
+    defineClient(): SharedWorkerClient {
+      return {
+        addMessageListener(fn) {
+          messageCallbacks.push(fn);
+        },
+        dispatch(data) {
+          worker.port.postMessage(makeBroadcastPayload(data));
+        }
       };
     }
   };

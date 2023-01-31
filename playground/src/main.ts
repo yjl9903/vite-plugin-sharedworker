@@ -1,7 +1,11 @@
 import 'uno.css';
 import '@onekuma/reset/tailwind.css';
 
-import { add, sub } from '../worker';
+import { add, sub, addMessageListener } from '../worker';
+
+addMessageListener((data) => {
+  console.log(data);
+});
 
 async function bootstrap() {
   console.log(await add(1, 2));

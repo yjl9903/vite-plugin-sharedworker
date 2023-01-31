@@ -38,6 +38,8 @@ export function parsePayload(payload: Payload): Payload | undefined {
     return payload;
   } else if (payload.command === 'rpc') {
     return payload;
+  } else if (payload.command === 'broadcast') {
+    return payload;
   } else {
     return undefined;
   }
