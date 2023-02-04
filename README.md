@@ -46,7 +46,7 @@ export async function sub(a: number, b: number) {
 
 Then you can just import your shared worker script like what you usually do.
 
-This plugin will transform your method call to send message to the shared worker, and receive return value from the shared worker. Note that all the messages are serialized as JSON.
+This plugin will transform your method call to send message to the shared worker, and receive return value from the shared worker.
 
 ```ts
 // src/main.ts
