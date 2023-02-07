@@ -7,7 +7,7 @@
     "dev": "vite"
   },
   "devDependencies": {
-    "@onekuma/reset": "^0.1.4",
+    "@onekuma/reset": "^0.1.8",
     "unocss": "^0.49.4",
     "vite": "^4.1.1",
     "vite-plugin-info": "^0.4.0",
