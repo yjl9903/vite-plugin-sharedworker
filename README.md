@@ -146,7 +146,7 @@ dispatch('Hello, this is client')
 
 ### Limitation
 
-**This plugin has some side effects to your scripts (under the worker directory)**.
+**This plugin has some side effects to your scripts (under the worker directory)**. If you encounter any problems with its transform, you can debug it with [vite-plugin-inspect](https://www.npmjs.com/package/vite-plugin-inspect) and create an issue here.
 
 The transform hook adds the following global variables at the beginning of the input worker script, so that you can not re-define these variables at the global scope.
 
