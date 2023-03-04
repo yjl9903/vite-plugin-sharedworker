@@ -5,7 +5,7 @@ importers:
   .:
     specifiers:
       '@types/node': ^18.11.18
-      '@types/sharedworker': ^0.0.91
+      '@types/sharedworker': ^0.0.92
       bumpp: latest
       prettier: latest
       turbo: latest
@@ -15,7 +15,7 @@ importers:
       vitest: ^0.29.2
     devDependencies:
       '@types/node': 18.11.18
-      '@types/sharedworker': 0.0.91
+      '@types/sharedworker': 0.0.92
       bumpp: 9.0.0
       prettier: 2.8.4
       turbo: 1.8.3
@@ -27,7 +27,7 @@ importers:
   packages/vite-plugin-worker:
     specifiers:
       '@types/node': ^18.11.18
-      '@types/sharedworker': ^0.0.91
+      '@types/sharedworker': ^0.0.92
       mlly: ^1.1.0
       unbuild: ^1.1.2
       vite: ^4.1.1
@@ -36,7 +36,7 @@ importers:
       mlly: 1.1.0
     devDependencies:
       '@types/node': 18.11.18
-      '@types/sharedworker': 0.0.91
+      '@types/sharedworker': 0.0.92
       unbuild: 1.1.2
       vite: 4.1.1_@types+node@18.11.18
       vitest: 0.29.2
@@ -897,8 +897,8 @@ packages:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
     dev: true
 
-  /@types/sharedworker/0.0.91:
-    resolution: {integrity: sha512-dgah1rutdK+TnzecsnfHn+zpisC2ILn9sBeXRGGEvBrrZJL4722UdYT56yjcDxvGiT2rMHGKXg/NygyEree5ZQ==}
+  /@types/sharedworker/0.0.92:
+    resolution: {integrity: sha512-5kUmfVyDCJOAxLT4Fi0bk2GyeU4MIOnTiOitqBw1kIdqpxgVVB0Rbo8oFjoZGhvaeTOxEETU4VwMGjk5+AcGlw==}
     dev: true
 
   /@unocss/astro/0.50.3_vite@4.1.1:
