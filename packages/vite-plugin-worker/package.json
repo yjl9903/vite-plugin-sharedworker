@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
-    "@types/sharedworker": "^0.0.92",
+    "@types/sharedworker": "^0.0.93",
     "unbuild": "^1.1.2",
     "vite": "^4.1.1",
     "vitest": "^0.29.2"
