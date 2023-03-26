@@ -4,7 +4,7 @@ importers:
 
   .:
     specifiers:
-      '@types/node': ^18.11.18
+      '@types/node': ^18.15.10
       '@types/sharedworker': ^0.0.96
       bumpp: latest
       prettier: latest
@@ -14,19 +14,19 @@ importers:
       vite: ^4.1.1
       vitest: ^0.29.7
     devDependencies:
-      '@types/node': 18.11.18
+      '@types/node': 18.15.10
       '@types/sharedworker': 0.0.96
       bumpp: 9.0.0
-      prettier: 2.8.5
-      turbo: 1.8.4
+      prettier: 2.8.7
+      turbo: 1.8.5
       typescript: 5.0.2
       unbuild: 1.1.2
-      vite: 4.1.1_@types+node@18.11.18
+      vite: 4.1.1_@types+node@18.15.10
       vitest: 0.29.7
 
   packages/vite-plugin-worker:
     specifiers:
-      '@types/node': ^18.11.18
+      '@types/node': ^18.15.10
       '@types/sharedworker': ^0.0.96
       mlly: ^1.1.0
       unbuild: ^1.1.2
@@ -35,10 +35,10 @@ importers:
     dependencies:
       mlly: 1.1.0
     devDependencies:
-      '@types/node': 18.11.18
+      '@types/node': 18.15.10
       '@types/sharedworker': 0.0.96
       unbuild: 1.1.2
-      vite: 4.1.1_@types+node@18.11.18
+      vite: 4.1.1_@types+node@18.15.10
       vitest: 0.29.7
 
   playground:
@@ -889,8 +889,8 @@ packages:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
     dev: true
 
-  /@types/node/18.11.18:
-    resolution: {integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==}
+  /@types/node/18.15.10:
+    resolution: {integrity: sha512-9avDaQJczATcXgfmMAW3MIWArOO7A+m90vuCFLr8AotWf8igO/mRoYukrk2cqZVtv38tHs33retzHEilM7FpeQ==}
     dev: true
 
   /@types/resolve/1.20.2:
@@ -2032,8 +2032,8 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /prettier/2.8.5:
-    resolution: {integrity: sha512-3gzuxrHbKUePRBB4ZeU08VNkUcqEHaUaouNt0m7LGP4Hti/NuB07C7PPTM/LkWqXoJYJn2McEo5+kxPNrtQkLQ==}
+  /prettier/2.8.7:
+    resolution: {integrity: sha512-yPngTo3aXUUmyuTjeTUT75txrf+aMh9FiD7q9ZE/i6r0bPb22g4FsE6Y338PQX1bmfy08i9QQCB7/rcUAVntfw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
@@ -2292,65 +2292,65 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /turbo-darwin-64/1.8.4:
-    resolution: {integrity: sha512-5fKhrm8Skl5niCcYnmNc1pNDAH48EHS7yio7s06btlTjvSdSsT+Dw+wQiAmGrAmpbqN3Xr7cKZwD749/Q1zS/A==}
+  /turbo-darwin-64/1.8.5:
+    resolution: {integrity: sha512-CAYh56bzeHfnh7jTm03r29bh8p5a/EjQo1Id5yLUH7hS7msTau/+YpxJWPodLbN0UQsUYivUqHQkglJ+eMJ7xA==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-darwin-arm64/1.8.4:
-    resolution: {integrity: sha512-4+5KbJ4msMB8/O5yj1TArfPw8XU0BYwJC35d/fAHb+NcVOg0XbOEOeYUcstMgAbYmD0aOjCKAvdBN85xdsdjGg==}
+  /turbo-darwin-arm64/1.8.5:
+    resolution: {integrity: sha512-R3jCPOv+lu3dcvMhj8b/Defv6dyUwX6W+tbX7d6YUCA46Plf/bGCQ8+MSbxmr/4E1GyGOVFsn1wRfiYk0us/Dg==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-64/1.8.4:
-    resolution: {integrity: sha512-c97Cjgm6aJ0KeivLJVEherImI2FQuQPfajwWgFWo5+WD11Zwy8ZTn7QrLJ7RMJr2dXnSo50yfy+xr/r6D55A0w==}
+  /turbo-linux-64/1.8.5:
+    resolution: {integrity: sha512-YRc/KNRZeUVvth11UO4SDQZR2IqGgl9MSsbzqoHuFz4B4Q5QXH7onHogv9aXWE/BZBBbcrSBTlwBSG0Gg+J8hg==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-arm64/1.8.4:
-    resolution: {integrity: sha512-FgA4LaI3CbSxpABxGydRBZWGoj03hiUWNoFo6GLdkDHam3x7Ky85Y9sTHOV59teCEQHjI04OfsjLulOhIsWh3Q==}
+  /turbo-linux-arm64/1.8.5:
+    resolution: {integrity: sha512-8exVZb7XBl/V3gHSweuUyG2D9IzfWqwLvlXoeLWlVYSj61Ajgdv+WU7lvUmx+H2s+sSKqmIFmewA5Lw6YY37sg==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-windows-64/1.8.4:
-    resolution: {integrity: sha512-AO3Wo+uGo0fs5/7fBlp05WjhnjYLoiP5NeZ7Up3PyR64MnkkwPM5a2hks2778ZgE24dTha7/CVGF1sxn4tF7Kw==}
+  /turbo-windows-64/1.8.5:
+    resolution: {integrity: sha512-fA8PU5ZNoFnQkapG06WiEqfsVQ5wbIPkIqTwUsd/M2Lp+KgxE79SQbuEI+2vQ9SmwM5qoMi515IPjgvXAJXgCw==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-windows-arm64/1.8.4:
-    resolution: {integrity: sha512-BAV8gTcu3q89rcMvTo7AfkSgCEaZvW9dH6SLqpLcDKACA/rdLhnn9WFTchj7DIHJIcs2+Do5KCjLoV4KhrC2YA==}
+  /turbo-windows-arm64/1.8.5:
+    resolution: {integrity: sha512-SW/NvIdhckLsAWjU/iqBbCB0S8kXupKscUK3kEW1DZIr3MYcP/yIuaE/IdPuqcoF3VP0I3TLD4VTYCCKAo3tKA==}
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo/1.8.4:
-    resolution: {integrity: sha512-ziVcsr0zhdmgfEzkaYF7q9h6BhBl4pDo1miRNsxIbEuxXQKaFGmsyW0WBM8/qaAC41by5lRHOdaZo9QMArmEJQ==}
+  /turbo/1.8.5:
+    resolution: {integrity: sha512-UBnH2wIFb5g6OQCk8f34Ud15ZXV4xEMmugeDJTU5Ur2LpVRsNEny0isSCYdb3Iu3howoNyyXmtpaxWsAwNYkkg==}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      turbo-darwin-64: 1.8.4
-      turbo-darwin-arm64: 1.8.4
-      turbo-linux-64: 1.8.4
-      turbo-linux-arm64: 1.8.4
-      turbo-windows-64: 1.8.4
-      turbo-windows-arm64: 1.8.4
+      turbo-darwin-64: 1.8.5
+      turbo-darwin-arm64: 1.8.5
+      turbo-linux-64: 1.8.5
+      turbo-linux-arm64: 1.8.5
+      turbo-windows-64: 1.8.5
+      turbo-windows-arm64: 1.8.5
     dev: true
 
   /type-detect/4.0.8:
@@ -2480,7 +2480,7 @@ packages:
       picocolors: 1.0.0
     dev: true
 
-  /vite-node/0.29.7_@types+node@18.11.18:
+  /vite-node/0.29.7_@types+node@18.15.10:
     resolution: {integrity: sha512-PakCZLvz37yFfUPWBnLa1OYHPCGm5v4pmRrTcFN4V/N/T3I6tyP3z07S//9w+DdeL7vVd0VSeyMZuAh+449ZWw==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -2490,7 +2490,7 @@ packages:
       mlly: 1.1.1
       pathe: 1.1.0
       picocolors: 1.0.0
-      vite: 4.1.1_@types+node@18.11.18
+      vite: 4.1.1_@types+node@18.15.10
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -2546,7 +2546,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vite/4.1.1_@types+node@18.11.18:
+  /vite/4.1.1_@types+node@18.15.10:
     resolution: {integrity: sha512-LM9WWea8vsxhr782r9ntg+bhSFS06FJgCvvB0+8hf8UWtvaiDagKYWXndjfX6kGl74keHJUcpzrQliDXZlF5yg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -2571,7 +2571,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 18.11.18
+      '@types/node': 18.15.10
       esbuild: 0.16.17
       postcss: 8.4.21
       resolve: 1.22.1
@@ -2610,7 +2610,7 @@ packages:
     dependencies:
       '@types/chai': 4.3.4
       '@types/chai-subset': 1.3.3
-      '@types/node': 18.11.18
+      '@types/node': 18.15.10
       '@vitest/expect': 0.29.7
       '@vitest/runner': 0.29.7
       '@vitest/spy': 0.29.7
@@ -2629,8 +2629,8 @@ packages:
       tinybench: 2.3.1
       tinypool: 0.4.0
       tinyspy: 1.0.2
-      vite: 4.1.1_@types+node@18.11.18
-      vite-node: 0.29.7_@types+node@18.11.18
+      vite: 4.1.1_@types+node@18.15.10
+      vite-node: 0.29.7_@types+node@18.15.10
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less
