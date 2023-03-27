@@ -51,7 +51,7 @@
     "mlly": "^1.2.0"
   },
   "devDependencies": {
-    "@types/node": "^18.11.18",
+    "@types/node": "^18.15.10",
     "@types/sharedworker": "^0.0.96",
     "unbuild": "^1.1.2",
     "vite": "^4.1.1",
@@ -61,6 +61,6 @@
     "vite": "^4.1.1"
   },
   "engines": {
-    "node": ">=v16.16.0"
+    "node": ">=v18.15.0"
   }
 }

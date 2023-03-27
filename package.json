@@ -12,7 +12,7 @@
     "preversion": "pnpm build && pnpm test"
   },
   "devDependencies": {
-    "@types/node": "^18.11.18",
+    "@types/node": "^18.15.10",
     "@types/sharedworker": "^0.0.96",
     "bumpp": "latest",
     "prettier": "latest",
@@ -24,6 +24,6 @@
   },
   "packageManager": "pnpm@7.30.3",
   "engines": {
-    "node": ">=v16.17.0"
+    "node": ">=v18.15.0"
   }
 }
