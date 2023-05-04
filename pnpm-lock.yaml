@@ -57,8 +57,8 @@ importers:
   playground:
     devDependencies:
       '@onekuma/reset':
-        specifier: ^0.1.9
-        version: 0.1.9
+        specifier: ^0.1.10
+        version: 0.1.10
       unocss:
         specifier: ^0.51.8
         version: 0.51.8(postcss@8.4.21)(rollup@3.20.2)(vite@4.1.1)
@@ -772,9 +772,9 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@onekuma/reset@0.1.9:
-    resolution: {integrity: sha512-xWwdtLrtLB9a1Z0/kFhzcLdk/2EJNbgw1HBybY+CazJQEsYQAzeJ0fQnQzzeVim8dayPvI9xPbf4KyGvmumBrA==}
-    engines: {node: '>=v16.19.0'}
+  /@onekuma/reset@0.1.10:
+    resolution: {integrity: sha512-KRLnytbPmNYId0SjAF2Y0h3ILLBN+T35NI6oLsYLcVu5ZpQ3rYEOqCRfryVRsRExlIyLnaaT1UvOCHXRdMZVTA==}
+    engines: {node: '>=v18.15.0'}
     dev: true
 
   /@polka/url@1.0.0-next.21:
