@@ -55,7 +55,7 @@
     "@types/sharedworker": "^0.0.96",
     "unbuild": "^1.2.1",
     "vite": "^4.3.8",
-    "vitest": "^0.31.2"
+    "vitest": "^0.31.3"
   },
   "peerDependencies": {
     "vite": "^4.3.8"
