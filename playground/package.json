@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "@onekuma/reset": "^0.1.10",
-    "unocss": "^0.52.5",
+    "unocss": "^0.52.7",
     "vite": "^4.3.8",
     "vite-plugin-info": "^0.4.0",
     "vite-plugin-sharedworker": "workspace:*"
