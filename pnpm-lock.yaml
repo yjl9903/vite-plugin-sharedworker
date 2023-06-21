@@ -12,8 +12,8 @@ importers:
         specifier: ^18.16.18
         version: 18.16.18
       '@types/sharedworker':
-        specifier: ^0.0.96
-        version: 0.0.96
+        specifier: ^0.0.97
+        version: 0.0.97
       bumpp:
         specifier: latest
         version: 9.1.1
@@ -46,8 +46,8 @@ importers:
         specifier: ^18.16.18
         version: 18.16.18
       '@types/sharedworker':
-        specifier: ^0.0.96
-        version: 0.0.96
+        specifier: ^0.0.97
+        version: 0.0.97
       unbuild:
         specifier: ^1.2.1
         version: 1.2.1
@@ -699,8 +699,8 @@ packages:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
     dev: true
 
-  /@types/sharedworker@0.0.96:
-    resolution: {integrity: sha512-tVby4LA8e1R4aEAJFA91Pf7ukZ3EyqKAaVymtNpzYJzXNdxE67lnUwaBRrhlYLKPgq7j4+SJqtUX4FU+Ebk9eA==}
+  /@types/sharedworker@0.0.97:
+    resolution: {integrity: sha512-YfsV5HDhtt+Q9fR5lTb6PTCb/hYJqwc3N7iR6Qh6Cp2YamV4xk3j7MA0PIuxi5m3mFpoflce/+NGIjauIawBSQ==}
     dev: true
 
   /@unocss/astro@0.53.1(rollup@3.25.1)(vite@4.3.8):
