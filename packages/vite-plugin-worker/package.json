@@ -54,11 +54,11 @@
     "@types/node": "^18.17.1",
     "@types/sharedworker": "^0.0.101",
     "unbuild": "^1.2.1",
-    "vite": "^4.3.8",
+    "vite": "^4.4.7",
     "vitest": "^0.33.0"
   },
   "peerDependencies": {
-    "vite": "^4.3.8"
+    "vite": "^4.4.7"
   },
   "engines": {
     "node": ">=v18.16.0"
