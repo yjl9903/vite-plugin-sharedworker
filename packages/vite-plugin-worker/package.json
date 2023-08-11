@@ -51,7 +51,7 @@
     "mlly": "^1.4.0"
   },
   "devDependencies": {
-    "@types/node": "^18.17.4",
+    "@types/node": "^18.17.5",
     "@types/sharedworker": "^0.0.101",
     "unbuild": "^1.2.1",
     "vite": "^4.3.8",
