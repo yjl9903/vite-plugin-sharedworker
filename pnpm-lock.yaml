@@ -30,7 +30,7 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0(typescript@5.2.2)
       vite:
-        specifier: ^4.3.8
+        specifier: ^4.4.9
         version: 4.4.9(@types/node@18.17.18)
       vitest:
         specifier: ^0.34.5
@@ -52,7 +52,7 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0(typescript@5.2.2)
       vite:
-        specifier: ^4.3.8
+        specifier: ^4.4.9
         version: 4.4.9(@types/node@18.17.18)
       vitest:
         specifier: ^0.34.5
@@ -67,7 +67,7 @@ importers:
         specifier: ^0.56.1
         version: 0.56.1(postcss@8.4.29)(rollup@3.29.2)(vite@4.4.9)
       vite:
-        specifier: ^4.3.8
+        specifier: ^4.4.9
         version: 4.4.9(@types/node@18.17.18)
       vite-plugin-info:
         specifier: ^0.4.1
