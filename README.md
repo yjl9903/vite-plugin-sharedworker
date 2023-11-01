@@ -1,6 +1,7 @@
 # vite-plugin-sharedworker
 
-[![CI](https://github.com/yjl9903/vite-plugin-sharedworker/actions/workflows/ci.yml/badge.svg)](https://github.com/yjl9903/vite-plugin-sharedworker/actions/workflows/ci.yml) [![version](https://img.shields.io/npm/v/vite-plugin-sharedworker?color=rgb%2850%2C203%2C86%29&label=vite-plugin-sharedworker)](https://www.npmjs.com/package/vite-plugin-sharedworker)
+[![CI](https://github.com/yjl9903/vite-plugin-sharedworker/actions/workflows/ci.yml/badge.svg)](https://github.com/yjl9903/vite-plugin-sharedworker/actions/workflows/ci.yml)
+[![version](https://img.shields.io/npm/v/vite-plugin-sharedworker?label=vite-plugin-sharedworker)](https://www.npmjs.com/package/vite-plugin-sharedworker)
 
 Make [SharedWorker](https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker) works like Remote Procedure Call easily.
 
