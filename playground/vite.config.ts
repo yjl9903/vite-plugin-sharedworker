@@ -11,7 +11,8 @@ import {
 } from 'unocss';
 import Uno from 'unocss/vite';
 
-import BuildInfo from 'vite-plugin-info';
+import BuildInfo from 'unplugin-info/vite';
+
 import SharedWorker from '../packages/vite-plugin-sharedworker/src';
 
 export default defineConfig({
