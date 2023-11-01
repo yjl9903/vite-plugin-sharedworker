@@ -48,12 +48,12 @@ export async function sub(a: number, b: number) {
 
 Then you can just import your shared worker script like what you usually do.
 
-This plugin will transform your method call to send message to the shared worker, and receive return value from the shared worker. Note that all the messages are serialized as JSON.
+This plugin will transform your method call to send message to the shared worker, and receive return value from the shared worker.
 
 ```ts
 // src/main.ts
 
-import { add, sub } from '../worker'
+import { add, sub } from './math.sharedworker'
 
 const a = await add(1, 2)
 const b = await sub(2, 1)
@@ -148,7 +148,7 @@ dispatch('Hello, this is client')
 
 ### Limitation
 
-**This plugin has some side effects to your scripts (under the worker directory)**.
+**This plugin has some side effects to your scripts**. If you encounter any problems with its transform, you can debug it with [vite-plugin-inspect](https://www.npmjs.com/package/vite-plugin-inspect) and create an issue here.
 
 The transform hook adds the following global variables at the beginning of the input worker script, so that you can not re-define these variables at the global scope.
 

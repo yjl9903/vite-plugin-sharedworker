@@ -31,7 +31,7 @@ All the scripts which endswith `.sharedworker.ts` or `.sharedworker.js` will be 
 You can just write functions and export them like what you usually do.
 
 ```ts
-// worker/index.ts
+// src/math.sharedworker.ts
 
 export async function add(a: number, b: number) {
   return a + b
@@ -53,7 +53,7 @@ This plugin will transform your method call to send message to the shared worker
 ```ts
 // src/main.ts
 
-import { add, sub } from '../worker'
+import { add, sub } from './math.sharedworker'
 
 const a = await add(1, 2)
 const b = await sub(2, 1)
@@ -148,7 +148,7 @@ dispatch('Hello, this is client')
 
 ### Limitation
 
-**This plugin has some side effects to your scripts (under the worker directory)**. If you encounter any problems with its transform, you can debug it with [vite-plugin-inspect](https://www.npmjs.com/package/vite-plugin-inspect) and create an issue here.
+**This plugin has some side effects to your scripts**. If you encounter any problems with its transform, you can debug it with [vite-plugin-inspect](https://www.npmjs.com/package/vite-plugin-inspect) and create an issue here.
 
 The transform hook adds the following global variables at the beginning of the input worker script, so that you can not re-define these variables at the global scope.
 
