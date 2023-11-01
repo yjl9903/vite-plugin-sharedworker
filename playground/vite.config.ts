@@ -12,7 +12,7 @@ import {
 import Uno from 'unocss/vite';
 
 import BuildInfo from 'vite-plugin-info';
-import SharedWorker from 'vite-plugin-sharedworker';
+import SharedWorker from '../packages/vite-plugin-sharedworker/src';
 
 export default defineConfig({
   plugins: [

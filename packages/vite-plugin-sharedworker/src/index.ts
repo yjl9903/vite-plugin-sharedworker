@@ -1,20 +1,39 @@
-import { type Plugin, normalizePath } from 'vite';
+import { type Plugin } from 'vite';
 
 import path from 'path';
 import { findExports } from 'mlly';
 
-export default function SharedWorker(options?: { root?: string }): Plugin {
-  let root = process.cwd();
-  const { root: workerRoot = './worker' } = options ?? {};
+export interface SharedWorkerOptions {
+  /**
+   * @default [/\.sharedworker\.(js|ts)$/]
+   */
+  include?: Array<string | RegExp>;
+}
+
+export default function SharedWorker(options: SharedWorkerOptions = {}): Plugin {
+  const { include = [/\.sharedworker\.(js|ts)/] } = options ?? {};
+
+  const filter = (id: string) => {
+    const text = id.replace(/\?[^=]+=[^=]+(&[^=]+=[^=]+)*$/, '');
+    for (const pat of include) {
+      if (typeof pat === 'string') {
+        if (text.includes(pat)) {
+          return true;
+        }
+      } else {
+        if (pat.test(text)) {
+          return true;
+        }
+      }
+    }
+    return false;
+  };
 
   return {
     name: 'vite-plugin-sharedworker:client',
     enforce: 'pre',
-    configResolved(config) {
-      root = normalizePath(path.join(config.root, workerRoot));
-    },
     transform(code, id) {
-      if (id.startsWith(root)) {
+      if (filter(id)) {
         const isClient = !id.endsWith('worker_file');
 
         const exports = findExports(code)

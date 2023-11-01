@@ -1,7 +1,7 @@
 import 'uno.css';
 import '@onekuma/reset/tailwind.css';
 
-import { add, sub, dispatch, addMessageListener } from '../worker';
+import { add, sub, dispatch, addMessageListener } from './math.sharedworker';
 
 addMessageListener((payload) => {
   console.log('Receive:', payload);

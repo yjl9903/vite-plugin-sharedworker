@@ -13,6 +13,7 @@ npm i -D vite-plugin-sharedworker
 
 ```ts
 // vite.config.ts
+
 import { defineConfig } from 'vite'
 import SharedWorker from 'vite-plugin-sharedworker'
 
@@ -25,12 +26,12 @@ export default defineConfig({
 
 ## Usage
 
-Create a directory used for shared workers (default is `./worker/`). All the scripts in this directory will be transformed as RPC shared worker.
+All the scripts which endswith `.sharedworker.ts` or `.sharedworker.js` will be transformed as RPC shared worker.
 
 You can just write functions and export them like what you usually do.
 
 ```ts
-// worker/index.ts
+// src/math.sharedworker.ts
 
 export async function add(a: number, b: number) {
   return a + b
