@@ -1,8 +1,14 @@
 {
   "name": "vite-plugin-sharedworker",
   "version": "0.1.0",
-  "description": "",
-  "keywords": [],
+  "description": "Make SharedWorker works like Remote Procedure Call easily",
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "rpc",
+    "sharedworker",
+    "webworker"
+  ],
   "homepage": "https://github.com/yjl9903/vite-plugin-sharedworker#readme",
   "bugs": {
     "url": "https://github.com/yjl9903/vite-plugin-sharedworker/issues"
