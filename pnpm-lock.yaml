@@ -36,7 +36,7 @@ importers:
         specifier: ^0.34.6
         version: 0.34.6
 
-  packages/vite-plugin-worker:
+  packages/vite-plugin-sharedworker:
     dependencies:
       mlly:
         specifier: ^1.4.2
@@ -74,7 +74,7 @@ importers:
         version: 0.4.1(vite@4.5.0)
       vite-plugin-sharedworker:
         specifier: workspace:*
-        version: link:../packages/vite-plugin-worker
+        version: link:../packages/vite-plugin-sharedworker
 
 packages:
 
