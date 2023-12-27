@@ -12,8 +12,8 @@ importers:
         specifier: ^20.10.5
         version: 20.10.5
       '@types/sharedworker':
-        specifier: ^0.0.110
-        version: 0.0.110
+        specifier: ^0.0.111
+        version: 0.0.111
       bumpp:
         specifier: latest
         version: 9.2.1
@@ -46,8 +46,8 @@ importers:
         specifier: ^20.10.5
         version: 20.10.5
       '@types/sharedworker':
-        specifier: ^0.0.110
-        version: 0.0.110
+        specifier: ^0.0.111
+        version: 0.0.111
       unbuild:
         specifier: ^2.0.0
         version: 2.0.0(typescript@5.3.3)
@@ -934,8 +934,8 @@ packages:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
     dev: true
 
-  /@types/sharedworker@0.0.110:
-    resolution: {integrity: sha512-TN6ird5VbAD6Pbneds/xL209Gfnp1hU9ZZ71ia1gtw4YnYuGXnsjYyUQz2ZsjPLi6nVz15//v9cSvpB7x2TxfQ==}
+  /@types/sharedworker@0.0.111:
+    resolution: {integrity: sha512-pyviJ17SWJc0HMoZYAol5P4B/3f+smo3FcyecSWcPGbbKBYuBPY/EUw2rvXbOzzTX5GKqTrnXni8/aIDpj9fsw==}
     dev: true
 
   /@unocss/astro@0.58.0(rollup@3.29.4)(vite@5.0.10):
@@ -1881,6 +1881,7 @@ packages:
   /has-flag@3.0.0:
     resolution: {integrity: sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw==}
     engines: {node: '>=4'}
+    requiresBuild: true
     dev: true
 
   /hasown@2.0.0:
