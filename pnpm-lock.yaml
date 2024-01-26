@@ -67,8 +67,8 @@ importers:
         specifier: ^0.58.4
         version: 0.58.4(postcss@8.4.33)(rollup@3.29.4)(vite@5.0.12)
       unplugin-info:
-        specifier: ^1.0.1
-        version: 1.0.1(rollup@3.29.4)(vite@5.0.12)
+        specifier: ^1.0.2
+        version: 1.0.2(rollup@3.29.4)(vite@5.0.12)
       vite:
         specifier: ^5.0.12
         version: 5.0.12(@types/node@20.11.7)
@@ -3204,8 +3204,8 @@ packages:
       - supports-color
     dev: true
 
-  /unplugin-info@1.0.1(rollup@3.29.4)(vite@5.0.12):
-    resolution: {integrity: sha512-fs/AxIQ2g242gbm1vAKn9ZvmlYTZSmZN2CplBLbbJkRf32QMhTeWD+gDWp3mR3HHnZolUk8j0eRr2RS1SqxDyA==}
+  /unplugin-info@1.0.2(rollup@3.29.4)(vite@5.0.12):
+    resolution: {integrity: sha512-62oWGn+7Ge3uhvctMyOQNInRYBnNj9vZ+bQl5EeQHtvfI8PWUJdJIxG0jDduYbOMBS63zTeEkR/kSg8U8S+FLQ==}
     peerDependencies:
       '@nuxt/kit': ^3.7.3
       '@nuxt/schema': ^3.7.3
