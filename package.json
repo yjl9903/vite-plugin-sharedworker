@@ -22,7 +22,7 @@
     "vite": "^5.1.2",
     "vitest": "^1.2.2"
   },
-  "packageManager": "pnpm@8.15.2",
+  "packageManager": "pnpm@8.15.3",
   "engines": {
     "node": ">=v18.16.0"
   }
