@@ -54,7 +54,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "mlly": "^1.6.0"
+    "mlly": "^1.6.1"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",

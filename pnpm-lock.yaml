@@ -39,7 +39,7 @@ importers:
   packages/vite-plugin-sharedworker:
     dependencies:
       mlly:
-        specifier: ^1.6.0
+        specifier: ^1.6.1
         version: 1.6.1
     devDependencies:
       '@types/node':
