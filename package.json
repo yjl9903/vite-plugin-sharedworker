@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.12.7",
-    "@types/sharedworker": "^0.0.113",
+    "@types/sharedworker": "^0.0.114",
     "bumpp": "latest",
     "prettier": "latest",
     "turbo": "latest",
