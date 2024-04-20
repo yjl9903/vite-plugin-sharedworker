@@ -30,8 +30,8 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0(typescript@5.4.5)
       vite:
-        specifier: ^5.2.9
-        version: 5.2.9(@types/node@20.12.7)
+        specifier: ^5.2.10
+        version: 5.2.10(@types/node@20.12.7)
       vitest:
         specifier: ^1.5.0
         version: 1.5.0(@types/node@20.12.7)
@@ -52,8 +52,8 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0(typescript@5.4.5)
       vite:
-        specifier: ^5.2.9
-        version: 5.2.9(@types/node@20.12.7)
+        specifier: ^5.2.10
+        version: 5.2.10(@types/node@20.12.7)
       vitest:
         specifier: ^1.5.0
         version: 1.5.0(@types/node@20.12.7)
@@ -65,13 +65,13 @@ importers:
         version: 0.1.11
       unocss:
         specifier: ^0.59.4
-        version: 0.59.4(postcss@8.4.38)(rollup@4.14.2)(vite@5.2.9(@types/node@20.12.7))
+        version: 0.59.4(postcss@8.4.38)(rollup@4.14.2)(vite@5.2.10(@types/node@20.12.7))
       unplugin-info:
         specifier: ^1.1.0
-        version: 1.1.0(esbuild@0.20.2)(rollup@4.14.2)(vite@5.2.9(@types/node@20.12.7))
+        version: 1.1.0(esbuild@0.20.2)(rollup@4.14.2)(vite@5.2.10(@types/node@20.12.7))
       vite:
-        specifier: ^5.2.9
-        version: 5.2.9(@types/node@20.12.7)
+        specifier: ^5.2.10
+        version: 5.2.10(@types/node@20.12.7)
       vite-plugin-sharedworker:
         specifier: workspace:*
         version: link:../packages/vite-plugin-sharedworker
@@ -1991,8 +1991,8 @@ packages:
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
 
-  vite@5.2.9:
-    resolution: {integrity: sha512-uOQWfuZBlc6Y3W/DTuQ1Sr+oIXWvqljLvS881SVmAj00d5RdgShLcuXWxseWPd4HXwiYBFW/vXHfKFeqj9uQnw==}
+  vite@5.2.10:
+    resolution: {integrity: sha512-PAzgUZbP7msvQvqdSD+ErD5qGnSFiGOoWmV5yAKUEI0kdhjbH6nMWVyZQC/hSc4aXwc0oJ9aEdIiF9Oje0JFCw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -2612,13 +2612,13 @@ snapshots:
 
   '@types/sharedworker@0.0.114': {}
 
-  '@unocss/astro@0.59.4(rollup@4.14.2)(vite@5.2.9(@types/node@20.12.7))':
+  '@unocss/astro@0.59.4(rollup@4.14.2)(vite@5.2.10(@types/node@20.12.7))':
     dependencies:
       '@unocss/core': 0.59.4
       '@unocss/reset': 0.59.4
-      '@unocss/vite': 0.59.4(rollup@4.14.2)(vite@5.2.9(@types/node@20.12.7))
+      '@unocss/vite': 0.59.4(rollup@4.14.2)(vite@5.2.10(@types/node@20.12.7))
     optionalDependencies:
-      vite: 5.2.9(@types/node@20.12.7)
+      vite: 5.2.10(@types/node@20.12.7)
     transitivePeerDependencies:
       - rollup
 
@@ -2749,7 +2749,7 @@ snapshots:
     dependencies:
       '@unocss/core': 0.59.4
 
-  '@unocss/vite@0.59.4(rollup@4.14.2)(vite@5.2.9(@types/node@20.12.7))':
+  '@unocss/vite@0.59.4(rollup@4.14.2)(vite@5.2.10(@types/node@20.12.7))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@rollup/pluginutils': 5.1.0(rollup@4.14.2)
@@ -2761,7 +2761,7 @@ snapshots:
       chokidar: 3.6.0
       fast-glob: 3.3.2
       magic-string: 0.30.10
-      vite: 5.2.9(@types/node@20.12.7)
+      vite: 5.2.10(@types/node@20.12.7)
     transitivePeerDependencies:
       - rollup
 
@@ -3948,9 +3948,9 @@ snapshots:
 
   universalify@2.0.1: {}
 
-  unocss@0.59.4(postcss@8.4.38)(rollup@4.14.2)(vite@5.2.9(@types/node@20.12.7)):
+  unocss@0.59.4(postcss@8.4.38)(rollup@4.14.2)(vite@5.2.10(@types/node@20.12.7)):
     dependencies:
-      '@unocss/astro': 0.59.4(rollup@4.14.2)(vite@5.2.9(@types/node@20.12.7))
+      '@unocss/astro': 0.59.4(rollup@4.14.2)(vite@5.2.10(@types/node@20.12.7))
       '@unocss/cli': 0.59.4(rollup@4.14.2)
       '@unocss/core': 0.59.4
       '@unocss/extractor-arbitrary-variants': 0.59.4
@@ -3969,15 +3969,15 @@ snapshots:
       '@unocss/transformer-compile-class': 0.59.4
       '@unocss/transformer-directives': 0.59.4
       '@unocss/transformer-variant-group': 0.59.4
-      '@unocss/vite': 0.59.4(rollup@4.14.2)(vite@5.2.9(@types/node@20.12.7))
+      '@unocss/vite': 0.59.4(rollup@4.14.2)(vite@5.2.10(@types/node@20.12.7))
     optionalDependencies:
-      vite: 5.2.9(@types/node@20.12.7)
+      vite: 5.2.10(@types/node@20.12.7)
     transitivePeerDependencies:
       - postcss
       - rollup
       - supports-color
 
-  unplugin-info@1.1.0(esbuild@0.20.2)(rollup@4.14.2)(vite@5.2.9(@types/node@20.12.7)):
+  unplugin-info@1.1.0(esbuild@0.20.2)(rollup@4.14.2)(vite@5.2.10(@types/node@20.12.7)):
     dependencies:
       ci-info: 4.0.0
       git-url-parse: 14.0.0
@@ -3986,7 +3986,7 @@ snapshots:
     optionalDependencies:
       esbuild: 0.20.2
       rollup: 4.14.2
-      vite: 5.2.9(@types/node@20.12.7)
+      vite: 5.2.10(@types/node@20.12.7)
     transitivePeerDependencies:
       - supports-color
 
@@ -4023,7 +4023,7 @@ snapshots:
       debug: 4.3.4
       pathe: 1.1.2
       picocolors: 1.0.0
-      vite: 5.2.9(@types/node@20.12.7)
+      vite: 5.2.10(@types/node@20.12.7)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -4034,7 +4034,7 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.2.9(@types/node@20.12.7):
+  vite@5.2.10(@types/node@20.12.7):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
@@ -4062,7 +4062,7 @@ snapshots:
       strip-literal: 2.1.0
       tinybench: 2.7.0
       tinypool: 0.8.3
-      vite: 5.2.9(@types/node@20.12.7)
+      vite: 5.2.10(@types/node@20.12.7)
       vite-node: 1.5.0(@types/node@20.12.7)
       why-is-node-running: 2.2.2
     optionalDependencies:
